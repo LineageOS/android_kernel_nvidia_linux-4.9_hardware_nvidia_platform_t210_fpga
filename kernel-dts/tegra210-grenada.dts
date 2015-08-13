@@ -1121,7 +1121,7 @@
 		};
 	};
 
-	pcie-controller {
+	pcie-controller@1003000 {
 		status = "disabled";
 
 		pci@1,0 {
