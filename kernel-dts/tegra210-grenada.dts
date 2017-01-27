@@ -1225,7 +1225,7 @@
 		status = "okay";
 	};
 
-	xudc@700D0000 {
+	xudc@700d0000 {
 		nvidia,common_padctl = <&xusb_pad_ctl>;
 		status = "okay";
 	};
