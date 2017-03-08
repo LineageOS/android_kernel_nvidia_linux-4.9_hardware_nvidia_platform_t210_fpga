@@ -1195,10 +1195,6 @@
 		status = "okay";
 	};
 
-	udc@7d000000 {
-		status = "okay";
-	};
-
 	/* Put common control config here */
 	xusb_pad_ctl: xusb_padctl {
 		nvidia,ss_ports = < TEGRA_XHCI_SS_P0 TEGRA_XHCI_USB2_P0 TEGRA_XHCI_LANE_6 TEGRA_XHCI_PORT_STD
