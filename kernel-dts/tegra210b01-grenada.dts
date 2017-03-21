@@ -1,7 +1,7 @@
 /*
  * arch/arm64/boot/dts/tegra210b01-grenada.dtsi
  *
- * Copyright (c) 2013-2015, NVIDIA CORPORATION.  All rights reserved.
+ * Copyright (c) 2013-2017, NVIDIA CORPORATION.  All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 
 /memreserve/ 0x80000000 0x00020000;
 
-#include <tegra210-soc/tegra210-soc-shield.dtsi>
+#include <t210b01-soc/tegra210b01-soc-common-platform.dtsi>
 #include "fpga-platforms/tegra210-grenada-fixed.dtsi"
 #include <t210-common-platforms/tegra210-ers-power-dvfs-e2174-1101-a00.dtsi>
 #include <dt-bindings/pinctrl/pinctrl-tegra.h>
