@@ -106,6 +106,8 @@
 		compatible = "nvidia,tegra210-uart", "nvidia,tegra114-hsuart";
 		console-port;
 		status = "okay";
+		/delete-property/ resets;
+		/delete-property/ reset-names;
 		clock-frequency = < 25500000 >;
 	};
 
