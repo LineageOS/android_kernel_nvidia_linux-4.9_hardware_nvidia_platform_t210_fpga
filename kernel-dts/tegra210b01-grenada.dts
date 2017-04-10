@@ -36,7 +36,7 @@
 	nvidia,dtbbuildtime = __DATE__, __TIME__;
 
 	chosen {
-		bootargs ="mem=1024M@2048M earlycon=uart8250,mmio32,0x70006000 console=ttyS0,2400 maxcpus=1";
+		bootargs ="mem=1024M@2048M earlycon=uart8250,mmio32,0x70006000 console=ttyS0,2400 maxcpus=1 androidboot.selinux=permissive";
 		stdout-path = &uarta;
 		/* set for an image exactly 2999552 bytes */
 		linux,initrd-start = <0x81200000>;
