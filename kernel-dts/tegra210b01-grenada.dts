@@ -28,6 +28,7 @@
 #include <t210-common-platforms/tegra210-ers-power-dvfs-e2174-1101-a00.dtsi>
 #include <dt-bindings/pinctrl/pinctrl-tegra.h>
 #include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/soc/tegra-pmc.h>
 #include <dt-bindings/sound/tegra-asoc-alt.h>
 
 / {
@@ -58,7 +59,15 @@
 		reg = < 0x0 0x80000000 0x0 0x40000000 >;
 	};
 
+	rtc {
+		nvidia,pmc-wakeup = <&tegra_pmc PMC_WAKE_TYPE_EVENT 16
+			PMC_TRIGGER_TYPE_HIGH>;
+	};
+
 	pmc@7000e400 {
+		nvidia,invert-interrupt;
+		#nvidia,wake-cells = <3>;
+
 		nvidia,suspend-mode = <0>;
 		nvidia,cpu-pwr-good-time = <0>;
 		nvidia,cpu-pwr-off-time = <0>;
