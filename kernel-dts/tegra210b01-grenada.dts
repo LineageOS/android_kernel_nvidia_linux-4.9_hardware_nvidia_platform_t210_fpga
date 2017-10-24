@@ -885,9 +885,6 @@
 			status = "okay";
 		};
 
-		spdif@702d6000 {
-			status = "okay";
-		};
 		iqc@702de000 {
 			timestamp-enable = <0>;
 			data-offset = <1>;
@@ -968,7 +965,7 @@
 		nvidia,num-adx = <2>;
 		nvidia,amx-slot-size = <32 32>;
 		nvidia,adx-slot-size = <32 32>;
-		nvidia,num-codec-link = <7>;
+		nvidia,num-codec-link = <6>;
 		nvidia,amx-slot-map = <
 			/* jack 0 */
 			TDM_SLOT_MAP(0, 0, 0)
@@ -1114,18 +1111,6 @@
 		};
 		nvidia,dai-link-4 {
 			link-name = "spdif-dit-3";
-			cpu-dai = <&tegra_spdif>;
-			codec-dai = <&spdif_dit3>;
-			cpu-dai-name = "SPDIF1-1";
-			codec-dai-name = "dit-hifi";
-			format = "i2s";
-			bit-format = "s16_le";
-			srate = <48000>;
-			num-channel = <2>;
-			name-prefix = "s";
-		};
-		nvidia,dai-link-5 {
-			link-name = "spdif-dit-4";
 			cpu-dai = <&tegra_dmic1>;
 			codec-dai = <&spdif_dit0>;
 			cpu-dai-name = "DMIC1";
@@ -1136,8 +1121,8 @@
 			num-channel = <2>;
 			name-prefix = "dmic-x";
 		};
-		nvidia,dai-link-6 {
-			link-name = "spdif-dit-5";
+		nvidia,dai-link-5 {
+			link-name = "spdif-dit-4";
 			cpu-dai = <&tegra_dmic2>;
 			codec-dai = <&spdif_dit1>;
 			cpu-dai-name = "DMIC2";
